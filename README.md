@@ -7,6 +7,8 @@ This script is to automatically bootstrap a freshly installed MAC OS X Machine a
 
 After a fresh Install of MAC OS X, download the setup_git.sh and run it to get git on the MAC if not already installed.
 
+Download here: https://github.com/praveenram/mac-dev-box-setup/blob/master/setup_git.sh
+
 After that, clone this repository.
 
 Run setup.sh as root.
