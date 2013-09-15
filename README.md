@@ -11,6 +11,8 @@ Download here: https://github.com/praveenram/mac-dev-box-setup/blob/master/setup
 
 After that, clone this repository.
 
+git clone --recursive https://github.com/praveenram/mac-dev-box-setup.git
+
 Run setup.sh as root.
 
 At this point in time, the script will install:
