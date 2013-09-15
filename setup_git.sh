@@ -10,6 +10,8 @@ echo "Adding git to path for current terminal"
 sudo source /etc/profile
 echo "Cleaning up downloaded files"
 rm git.dmg
+echo "Setting push to default to matching"
+git config --global push.default matching
 echo "Setting vim as default commit edit tool"
 git config --global core.editor /usr/bin/vim
 echo "Git Installation Complete!"
