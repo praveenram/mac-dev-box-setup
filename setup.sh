@@ -7,6 +7,8 @@ else
    exit 1
 fi
 
+THE_USER=${SUDO_USER:-${USERNAME}}
+
 echo "Installing XCode - CLI"
 if [ -f ./.progress ];
 then 
@@ -32,7 +34,7 @@ echo "Installing Homebrew - The MAC Package Manager"
 if [ $status -le 2 ];
 then
    sh ./set_progress.sh 2
-   ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+   sudo -u ${THE_USER} ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
    echo "Homebrew Install Complete"
 else
    echo "Homebrew already installed"
@@ -42,8 +44,8 @@ echo "Checking brew integrity and Updating brew packages"
 if [ $status -le 3 ];
 then
    sh set_progress.sh 3
-   brew doctor
-   brew update
+   sudo -u ${THE_USER} brew doctor
+   sudo -u ${THE_USER} brew update
    echo "Done!"
 else
    echo "Brew Already Up to date"
@@ -53,7 +55,7 @@ echo "Installing latest version of git"
 if [ $status -le 4 ];
 then
    sh set_progress.sh 4
-   brew install git
+   sudo -u ${THE_USER} brew install git
    echo "Done!"
 else
    echo "Git Already Up to date"
