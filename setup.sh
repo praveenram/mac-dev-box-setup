@@ -4,19 +4,20 @@ then
    echo "Running as sudo"
 else
    echo "Please run the script again with sudo permissions"
+   exit 1
 fi
 
 echo "Installing XCode - CLI"
-if [-f ./progress ];
+if [ -f ./.progress ];
 then 
-   status = `cat ./progress`
+   status=$(cat ./.progress)
+   echo $status
    if [ $status -le 1 ];
    then
-      sh ./set_progress.sh 1
       sh xcode_cli/xcode-cli-tools.sh
       echo "Xcode Installation Complete"
    else
-   echo "Xcode Already Installed!"
+      echo "Xcode Already Installed!"
    fi
 else
    sh ./set_progress.sh 1
@@ -24,7 +25,8 @@ else
    echo "Xcode Installation Complete"
 fi
 
-status = `cat ./progress`
+status=$(cat ./.progress)
+echo $status
 
 echo "Installing Homebrew - The MAC Package Manager"
 if [ $status -le 2 ];
