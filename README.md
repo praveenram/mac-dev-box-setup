@@ -14,6 +14,7 @@ After that, clone this repository.
     git clone --recursive https://github.com/praveenram/mac-dev-box-setup.git
 
 Run
+
     sudo setup.sh
 
 At this point in time, the script will install:
