@@ -5,9 +5,9 @@ MAC OS X Dev Box Setup Script
 
 This script is to automatically bootstrap a freshly installed MAC OS X Machine as a Developer Machine.
 
-After a fresh Install of MAC OS X, download the setup_git.sh and run it to get git on the MAC if not already installed.
+After a fresh Install of MAC OS X, run the following command to get git on the MAC if not already installed.
 
-Download here: https://github.com/praveenram/mac-dev-box-setup/blob/master/setup_git.sh
+    curl https://raw.github.com/praveenram/mac-dev-box-setup/master/setup_git.sh | sh
 
 After that, clone this repository.
 
