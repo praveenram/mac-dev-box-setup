@@ -2,4 +2,5 @@
 	path = xcode_cli
 	url = https://gist.github.com/6217746.git
 [submodule "setup_git"]
+	path = setup_git
 	url = https://gist.github.com/6934418.git
