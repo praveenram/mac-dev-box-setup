@@ -11,9 +11,10 @@ After a fresh Install of MAC OS X, run the following command to get git on the M
 
 After that, clone this repository.
 
-git clone --recursive https://github.com/praveenram/mac-dev-box-setup.git
+    git clone --recursive https://github.com/praveenram/mac-dev-box-setup.git
 
-Run setup.sh as root.
+Run
+    sudo setup.sh
 
 At this point in time, the script will install:
 
