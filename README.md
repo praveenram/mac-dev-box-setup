@@ -22,3 +22,13 @@ At this point in time, the script will install:
 1. XCode - Command line tools.
 2. Homebrew - Mac Package Manager.
 3. Latest Version of Git
+4. autoconf
+5. automake
+6. cmake
+7. wget
+8. ctags
+9. ack
+10. openssl
+11. libyaml
+12. rvm (stable)
+13. Sets path to point to brew installed packages (/usr/local/bin) first before system packages (/usr/local/sbin)
