@@ -60,3 +60,103 @@ then
 else
    echo "Git Already Up to date"
 fi
+
+echo "Installing autoconf"
+if [ $status -le 5 ];
+then
+   sh set_progress.sh 5
+   sudo -u ${THE_USER} brew install autoconf
+   echo "Done!"
+else
+   echo "autoconf already installed"
+fi
+
+echo "Installing automake"
+if [ $status -le 6 ];
+then
+   sh set_progress.sh 6
+   sudo -u ${THE_USER} brew install automake
+   echo "Done!"
+else
+   echo "automake already installed"
+fi
+
+echo "Installing cmake"
+if [ $status -le 7 ];
+then
+   sh set_progress.sh 7
+   sudo -u ${THE_USER} brew install cmake
+   echo "Done!"
+else
+   echo "cmake already installed"
+fi
+
+echo "Installing wget"
+if [ $status -le 8 ];
+then
+   sh set_progress.sh 8
+   sudo -u ${THE_USER} brew install wget
+   echo "Done!"
+else
+   echo "wget already installed"
+fi
+
+echo "Installing ctags"
+if [ $status -le 9 ];
+then
+   sh set_progress.sh 9
+   sudo -u ${THE_USER} brew install ctags
+   echo "Done!"
+else
+   echo "Ctags already installed"
+fi
+
+echo "Installing ack"
+if [ $status -le 10 ];
+then
+   sh set_progress.sh 10
+   sudo -u ${THE_USER} brew install ack
+   echo "Done!"
+else
+   echo "ack already installed"
+fi
+
+echo "Installing openssl"
+if [ $status -le 11 ];
+then
+   sh set_progress.sh 11
+   sudo -u ${THE_USER} brew install openssl
+   echo "Done!"
+else
+   echo "openssl already installed"
+fi
+
+echo "Installing libyaml"
+if [ $status -le 12 ];
+then
+   sh set_progress.sh 12
+   sudo -u ${THE_USER} brew install libyaml
+   echo "Done!"
+else
+   echo "libyaml already installed"
+fi
+
+echo "Install RVM - Ruby Version Manager"
+if [ $status -le 13 ];
+then
+   sh set_progress.sh 13
+   sudo -u ${THE_USER} curl -L https://get.rvm.io | bash -s stable
+   echo "Done!"
+else
+   echo "rvm already installed"
+fi
+
+echo "Setting homebrew cellar path before os path for commands available in both"
+if [ $status -le 14 ];
+then
+   sh set_progress.sh 14
+   sudo -u ${THE_USER} echo "export PATH=/usr/local/bin:/usr/local/sbin/:$PATH" >> $HOME/.bashrc
+   echo "Done!"
+else
+   echo "path already set!"
+fi
