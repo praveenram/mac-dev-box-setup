@@ -13,7 +13,6 @@ echo "Installing XCode - CLI"
 if [ -f ./.progress ];
 then 
    status=$(cat ./.progress)
-   echo $status
    if [ $status -le 1 ];
    then
       sh xcode_cli/xcode-cli-tools.sh
@@ -28,7 +27,6 @@ else
 fi
 
 status=$(cat ./.progress)
-echo $status
 
 echo "Installing Homebrew - The MAC Package Manager"
 if [ $status -le 2 ];
